@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+##################
+# Author : Zameer
+#
+# Script will report the aws usage.
+###################
+
+set -X
+
+#aws s3
+#aws EC2
+#aws lambda
+#aws IAM Users
+
+# To list the s3 buckets
+echo "Print list of s3 buckets"
+aws s3 ls
+
+#list aws ec2 instance
+echo "print ec2 Instances"
+# JQ is the json parser and here we are just taking the instance id .instance id is presest inside reservations.
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceID' 
+
+
+#list aws lambda
+echo "print lambda functions"
+aws lambda ist functons
+
+#list aws IAM Users
+echo "Print IAM USERS"
+aws iam list-users
+
