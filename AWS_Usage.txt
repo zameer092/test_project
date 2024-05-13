@@ -12,7 +12,7 @@ set -X
 #aws s3
 #aws EC2
 #aws lambda
-#aws IAM Users
+#aws IAM Users list
 
 # To list the s3 buckets
 echo "Print list of s3 buckets"
